@@ -17,3 +17,89 @@ a {
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+:root {
+  /* typo */
+  --btn-fs: calc(37px * 0.8);
+  --btn-fw: 700;
+  --inp-fs: calc(30px * 0.8);
+  /* color */
+  --btn-c: white;
+  --btn-bc: #00acec;
+  /* shape */
+  --br-r: calc(43px * 0.8);
+  --btn-p: calc(20px * 0.8) calc(40px * 0.8);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--btn-c);
+  border-radius: var(--br-r);
+  background-color: var(--btn-bc);
+  border: 0;
+  padding: var(--btn-p);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+  width: 100%;
+}
+
+input[type="text"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--btn-bc);
+  border-radius: var(--br-r);
+  background-color: var(--btn-c);
+  border: 0;
+  padding: var(--btn-p);
+  font-size: var(--inp-fs);
+  font-weight: var(--btn-fw);
+  width: 100%;
+}
+
+.minicontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+}
+.icon {
+  display: flex;
+  background-size: cover;
+  width: 360px;
+  height: 180px;
+}
+.logo {
+  background-image: url(mu.svg);
+}
+.text-white-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: var(--btn-fw);
+  font-size: var(--btn-fs);
+}
+
+.layout-register {
+  display: flex;
+  background-size: cover;
+  background-image: url(register-page.jpg);
+  /* opacity: 0.5; */
+  width: 100vw;
+  height: 100vh;
+  background-blend-mode: multiply;
+  filter: url(register-page.jpg);
+  filter: brightness(30%);
+  filter: contrast(200%);
+  /* filter: opacity(25%); */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: #fff; */
+  justify-content: center;
+  align-items: center;
+}
