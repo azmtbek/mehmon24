@@ -1,9 +1,9 @@
 import React from "react";
 
-function Icon() {
+function Icon({ sm }) {
   return (
     <>
-      <span className="icon logo"></span>
+      <span className={`icon${sm || ""} logo`}></span>
     </>
   );
 }

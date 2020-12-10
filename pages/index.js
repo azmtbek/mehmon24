@@ -1,15 +1,14 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
-import LayoutRegister from "../components/LayoutRegister";
+// import Header from "../components/Header";
+// import LayoutRegister from "../components/LayoutRegister";
+import Carousel from "../components/Carousel";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <LayoutRegister />
+      {" "}
+      {/* <Header /> */}
+      <Carousel />
     </div>
   );
 }
