@@ -179,12 +179,24 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
   color: white;
+  position: relative;
+  height: 100vh;
 }
 
 .carousel-img {
   position: fixed;
+
   width: 100vw;
   height: 100vh;
+  z-index: -1;
+  filter: opacity(100%) brightness(0.5) contrast(170%);
+}
+.carousel-img img {
+  width: 100vw;
+  /* height: 100vh; */
+  position: absolute;
+  /* top: 0;
+  right: 0; */
 }
 .carousel-center {
   display: flex;
@@ -213,12 +225,21 @@ input[type="text"] {
   bottom: 20px;
 }
 
+.carousel-down > .active {
+  filter: invert(51%) sepia(35%) saturate(6872%) hue-rotate(164deg)
+    brightness(99%) contrast(101%);
+  /* background-color: var(--c-blue); */
+}
+
+.carousel-down img {
+  padding: 20px 0;
+}
 /* Card-review */
 
 .card-review {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   padding: 20px;
   position: relative;
   gap: 20px;
@@ -351,10 +372,11 @@ footer {
   /* height: 500px; */
   position: relative;
   padding-bottom: 60px;
+  background-color: var(--c-milky);
 }
 
 footer > * {
-  margin: 10px;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

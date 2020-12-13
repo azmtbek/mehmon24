@@ -16,7 +16,7 @@ function Header() {
       </div>
       <Locale />
       <div className="header-btn">
-        <Button size="btn-sm" />
+        <Button size="btn-sm" text="Ro'yxatdan o'tish" />
       </div>
     </div>
   );

@@ -1,12 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-// import Header from "../components/Header";
+import Header from "../components/Header";
 // import LayoutRegister from "../components/LayoutRegister";
-// import Carousel from "../components/Carousel";
+import Carousel from "../components/Carousel";
 // import CardReview from "../components/CardReview";
 // import CardMember from "../components/CardMember";
 // import CardInfo from "../components/CardInfo";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -22,12 +22,12 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      {/* <Header /> */}
-      {/* <Carousel /> */}
+      <Header />
+      <Carousel />
       {/* <CardReview /> */}
       {/* <CardMember /> */}
       {/* <CardInfo /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
