@@ -14,11 +14,8 @@ a {
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
 }
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 :root {
   /* typo */
   /*  30px, 19px, 36px, 37px, 29px, 45px, 15px; */
@@ -26,8 +23,7 @@ a {
   --fs-sm: calc(var(--fs-md) * 0.5);
   --fs-lg: calc(var(--fs-md) * 1.5);
   --fs-xl: calc(var(--fs-md) * 2);
-
-  --fs-md1: 23px; /*23px*/
+  --fs-md1: 23px;
   --fs-sm1: calc(var(--fs-md1) * 0.83);
   --fs-lg1: calc(var(--fs-md1) * 1.61);
   --ff: "Roboto", sans-serif;
@@ -42,7 +38,6 @@ a {
   --c-dark-blue: #2196f3;
   --c-dark-gray: #737373;
   --c-gray: #c4c4c4;
-
   --c-light-gray: #dcdbdb;
   --c-milky: #f2f2f2;
   --c-black: #000;
@@ -52,11 +47,23 @@ a {
   /* shape */
   --br-r: calc(43px * 0.8);
   --btn-p: calc(20px * 0.8) calc(40px * 0.8);
-
   --filter-blue: invert(51%) sepia(35%) saturate(6872%) hue-rotate(164deg)
     brightness(99%) contrast(101%);
 }
 
+@media (max-width: 760px) {
+  :root {
+    --fs-md: calc(30px * 0.6);
+    --fs-md1: calc(23px * 0.6);
+  }
+}
+
+@media (max-width: 1360px) {
+  :root {
+    --fs-md: calc(30px * 0.8);
+    --fs-md1: calc(23px * 0.8);
+  }
+}
 .main {
   max-width: 100%;
   width: 100vw;
@@ -157,7 +164,7 @@ input[type="text"] {
   top: 0;
   padding-top: 50px;
   width: 100vw;
-  max-width: 100%x;
+  max-width: 100%;
   z-index: 10;
   flex-wrap: wrap;
   gap: 20px;
@@ -167,9 +174,14 @@ input[type="text"] {
   font-size: 24px;
   padding-bottom: 10px;
 }
+.header-link.active {
+  border-bottom: 4px solid #00acec;
+}
+
 .header-link:hover {
   border-bottom: 4px solid #00acec;
 }
+
 .header-links {
   display: flex;
   justify-content: center;
@@ -413,7 +425,7 @@ footer {
   position: relative;
   padding-bottom: 60px;
   background-color: var(--c-milky);
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 footer > * {
@@ -601,6 +613,7 @@ footer > * {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 20px auto;
 }
 
 .ip-left {
@@ -655,7 +668,7 @@ footer > * {
   align-items: center;
   width: min-content;
 
-  margin: 20px auto;
+  margin: 60px auto 20px;
   background-color: var(--c-milky);
   border-radius: var(--br-r);
 }

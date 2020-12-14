@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Carousel() {
+function Carousel({ children }) {
   const [srcn, setSrcn] = useState(0);
   const next = (val) => {
     let newVal = (val + 1) % 3;
@@ -22,12 +22,7 @@ function Carousel() {
       </div>
       <div className="carousel-center">
         <img src="left-arrow.svg" onClick={() => prev(srcn)} alt="" />
-        <div className="carousel-center-text">
-          <div className="text-title">Assalomu alaykum!</div>
-          <div className="text-body">
-            Mehmon24.uz loyihasining rasmiy web-saytiga xush kelibsiz!
-          </div>
-        </div>
+        <div className="carousel-center-text">{children}</div>
         <img src="right-arrow.svg" onClick={() => next(srcn)} alt="" />
       </div>
       <div className="carousel-down">

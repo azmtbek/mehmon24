@@ -3,16 +3,44 @@ import Icon from "./Icon";
 import HeaderLink from "./HeaderLink";
 import Button from "./Button";
 import Locale from "./Locale";
+import { useRouter } from "next/router";
 function Header() {
+  let router = useRouter();
   return (
     <div className="header">
       <Icon sm="-sm" />
       <div className="header-links">
-        <HeaderLink text="Asosiy qism" />
-        <HeaderLink text="Mehmonxonalar" />
-        <HeaderLink text="Restoranlar" />
-        <HeaderLink text="Turistik joylar" />
-        <HeaderLink text="Transport" />
+        <HeaderLink
+          text="Asosiy qism"
+          link="/"
+          active={router.pathname === "/" ? "active" : ""}
+        />
+        <HeaderLink
+          text="Mehmonxonalar"
+          link="/hotel"
+          active={
+            router.pathname === "/hotel" ||
+            router.pathname === "/motel" ||
+            router.pathname === "/hostel"
+              ? "active"
+              : ""
+          }
+        />
+        <HeaderLink
+          text="Restoranlar"
+          link="/restaurant"
+          active={router.pathname === "/restaurant" ? "active" : ""}
+        />
+        <HeaderLink
+          text="Turistik joylar"
+          link="/tourism"
+          active={router.pathname === "/tourism" ? "active" : ""}
+        />
+        <HeaderLink
+          text="Transport"
+          link="/transport"
+          active={router.pathname === "/transport" ? "active" : ""}
+        />
       </div>
       <Locale />
       <div className="header-btn">

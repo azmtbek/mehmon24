@@ -17,7 +17,6 @@ function LayoutMain({ children }) {
       </Head>
       <Header />
       {children}
-      <Footer />
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import Link from "next/link";
-function HeaderLink({ text }) {
+function HeaderLink({ text, link, active }) {
   return (
     <div>
-      <Link href="register" as="path">
-        <a className="header-link"> {text}</a>
+      <Link href={link} as={link}>
+        <a className={`header-link ${active || ""}`}> {text}</a>
       </Link>
     </div>
   );
