@@ -7,7 +7,7 @@ function Carousel() {
     setSrcn(newVal);
   };
   const prev = (val) => {
-    let newVal = (val + 4) % 3;
+    let newVal = (val + 2) % 3;
     setSrcn(newVal);
   };
   const set = (val) => {

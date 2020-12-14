@@ -1,18 +1,19 @@
 import Head from "next/head";
 // import styles from "../styles/Home.module.css";
-import Header from "../components/Header";
+
 // import LayoutRegister from "../components/LayoutRegister";
 import Carousel from "../components/Carousel";
 // import CardReview from "../components/CardReview";
 // import CardMember from "../components/CardMember";
 // import CardInfo from "../components/CardInfo";
-import Footer from "../components/Footer";
 
 import Reviews from "../components/Reviews";
 
 import About from "../components/About";
 import Members from "../components/Members";
 import Contact from "../components/Contact";
+
+import LayoutMain from "../components/LayoutMain";
 
 export default function Home() {
   return (
@@ -28,16 +29,16 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      {/* <Header /> */}
-      <Carousel />
-      <About />
-      {/* <CardReview /> */}
-      {/* <CardMember /> */}
-      {/* <CardInfo /> */}
-      <Reviews />
-      <Members />
-      <Contact />
-      <Footer />
+      <LayoutMain>
+        <Carousel />
+        <About />
+        {/* <CardReview /> */}
+        {/* <CardMember /> */}
+        {/* <CardInfo /> */}
+        <Reviews />
+        <Members />
+        <Contact />
+      </LayoutMain>
     </div>
   );
 }
