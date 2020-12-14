@@ -29,7 +29,7 @@ function Footer() {
         <div className="fm-title">Biz jaqimizda</div>
         <div className="fm-link">
           {" "}
-          <img src="call.png" alt="" /> +998 97 777-77-77
+          <img src="call.png" alt="" /> +998 94 199-71-71
         </div>
       </div>
       <div className="footer-register">

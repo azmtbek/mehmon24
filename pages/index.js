@@ -1,16 +1,22 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 // import LayoutRegister from "../components/LayoutRegister";
 import Carousel from "../components/Carousel";
 // import CardReview from "../components/CardReview";
 // import CardMember from "../components/CardMember";
 // import CardInfo from "../components/CardInfo";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
+
+import Reviews from "../components/Reviews";
+
+import About from "../components/About";
+import Members from "../components/Members";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="main">
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -22,12 +28,16 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Header />
+      {/* <Header /> */}
       <Carousel />
+      <About />
       {/* <CardReview /> */}
       {/* <CardMember /> */}
       {/* <CardInfo /> */}
-      {/* <Footer /> */}
+      <Reviews />
+      <Members />
+      <Contact />
+      <Footer />
     </div>
   );
 }
