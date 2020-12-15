@@ -2,7 +2,7 @@ import CardInfoPicy from "../components/CardInfoPicy";
 import ButtonGroup from "../components/ButtonGroup";
 import LayoutMain from "../components/LayoutMain";
 import Carousel from "../components/Carousel";
-function hotel() {
+function restaurant() {
   return (
     <LayoutMain>
       <Carousel>
@@ -18,4 +18,4 @@ function hotel() {
   );
 }
 
-export default hotel;
+export default restaurant;

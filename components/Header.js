@@ -4,6 +4,7 @@ import HeaderLink from "./HeaderLink";
 import Button from "./Button";
 import Locale from "./Locale";
 import { useRouter } from "next/router";
+import Link from "next/link";
 function Header() {
   let router = useRouter();
   return (
@@ -44,7 +45,11 @@ function Header() {
       </div>
       <Locale />
       <div className="header-btn">
-        <Button size="btn-sm" text="Ro'yxatdan o'tish" />
+        <Link href="/register" as="/">
+          <a>
+            <Button size="btn-sm" text="Ro'yxatdan o'tish" />
+          </a>
+        </Link>
       </div>
     </div>
   );

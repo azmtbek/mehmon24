@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Link from "next/link";
 
 function CardInfo() {
   return (
@@ -30,7 +31,11 @@ function CardInfo() {
         <img src="globe.png" alt="" /> www.mehmon24.uz
       </div>
       <div className="ci-btn">
-        <Button size="btn-sm" text="Buyurtma berish" />
+        <Link href="booking" as="booking">
+          <a>
+            <Button size="btn-sm" text="Buyurtma berish" />
+          </a>
+        </Link>
       </div>
     </div>
   );

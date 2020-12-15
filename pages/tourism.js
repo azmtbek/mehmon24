@@ -3,7 +3,7 @@ import ButtonGroup from "../components/ButtonGroup";
 import LayoutSecondary from "../components/LayoutSecondary";
 import Carousel from "../components/Carousel";
 import Button from "../components/Button";
-function hotel() {
+function tourism() {
   return (
     <LayoutSecondary>
       <Carousel>
@@ -16,4 +16,4 @@ function hotel() {
   );
 }
 
-export default hotel;
+export default tourism;
